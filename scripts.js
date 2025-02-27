@@ -1,4 +1,4 @@
-const brokerUrl = "ws://192.168.0.105:9001"; // WebSocket-порт
+const brokerUrl = "wss://192.168.0.105:9001"; // WebSocket-порт
 const topic = "ai/command"; // Топик для сообщений
 
 // Подключение к брокеру MQTT

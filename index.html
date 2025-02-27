@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SFDH</title>
+</head>
+<body>
+    <section id="section-climat">
+        <article id="weather-card">
+            <div id="weather-data">
+                <h2 id="city">Москва</h2>
+                <img id="weather-icon" src="" alt="Погода">
+                <p id="temperature">+18°C</p>
+                <p id="description">Ясно</p>
+            </div>
+
+            <div id="weather-additional-data">
+                <p id="weather-humidity">Влажность: --%</p>
+                <p id="weather-pressure">Давление: -- hPa</p>
+                <p id="weather-wind-speed">Ветер: -- м/с</p>
+            </div>                
+        </article>
+        <article id="weather-calendar">
+            <table>
+                <thead>
+                    <tr>
+                        <th id="day1-name">День 1</th>
+                        <th id="day2-name">День 2</th>
+                        <th id="day3-name">День 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="day-icons">
+                        <td><img id="day1-icon" src="" alt="Погода"></td>
+                        <td><img id="day2-icon" src="" alt="Погода"></td>
+                        <td><img id="day3-icon" src="" alt="Погода"></td>
+                    </tr>
+                    <tr>
+                        <td id="day1-temp">--°C</td>
+                        <td id="day2-temp">--°C</td>
+                        <td id="day3-temp">--°C</td>
+                    </tr>
+                    <tr>
+                        <td id="day1-description">Ясно</td>
+                        <td id="day2-description">Ясно</td>
+                        <td id="day3-description">Ясно</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>               
+    </section>
+    <section id="section-controls">
+        <article class="device-button" data-led-id="1">
+            <svg fill="currentColor" id="Layer_1" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1">
+                <path d="m17.994 2.286a9 9 0 0 0 -14.919 5.536 8.938 8.938 0 0 0 2.793 7.761 6.263 6.263 0 0 1 2.132 4.566v.161a3.694 3.694 0 0 0 3.69 3.69h.62a3.694 3.694 0 0 0 3.69-3.69v-.549a5.323 5.323 0 0 1 1.932-4 8.994 8.994 0 0 0 .062-13.477zm-5.684 19.714h-.62a1.692 1.692 0 0 1 -1.69-1.69s-.007-.26-.008-.31h4.008v.31a1.692 1.692 0 0 1 -1.69 1.69zm4.3-7.741a7.667 7.667 0 0 0 -2.364 3.741h-1.246v-7.184a3 3 0 0 0 2-2.816 1 1 0 0 0 -2 0 1 1 0 0 1 -2 0 1 1 0 0 0 -2 0 3 3 0 0 0 2 2.816v7.184h-1.322a8.634 8.634 0 0 0 -2.448-3.881 7 7 0 0 1 3.951-12.073 7.452 7.452 0 0 1 .828-.046 6.921 6.921 0 0 1 4.652 1.778 6.993 6.993 0 0 1 -.048 10.481z"/>
+            </svg>
+            <p>Led-1</p>
+            <div class="on-off-indicator"></div>
+        </article>
+        
+        <article class="device-button" data-led-id="2">
+            <svg fill="currentColor" id="Layer_1" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1">
+                <path d="m17.994 2.286a9 9 0 0 0 -14.919 5.536 8.938 8.938 0 0 0 2.793 7.761 6.263 6.263 0 0 1 2.132 4.566v.161a3.694 3.694 0 0 0 3.69 3.69h.62a3.694 3.694 0 0 0 3.69-3.69v-.549a5.323 5.323 0 0 1 1.932-4 8.994 8.994 0 0 0 .062-13.477zm-5.684 19.714h-.62a1.692 1.692 0 0 1 -1.69-1.69s-.007-.26-.008-.31h4.008v.31a1.692 1.692 0 0 1 -1.69 1.69zm4.3-7.741a7.667 7.667 0 0 0 -2.364 3.741h-1.246v-7.184a3 3 0 0 0 2-2.816 1 1 0 0 0 -2 0 1 1 0 0 1 -2 0 1 1 0 0 0 -2 0 3 3 0 0 0 2 2.816v7.184h-1.322a8.634 8.634 0 0 0 -2.448-3.881 7 7 0 0 1 3.951-12.073 7.452 7.452 0 0 1 .828-.046 6.921 6.921 0 0 1 4.652 1.778 6.993 6.993 0 0 1 -.048 10.481z"/>
+            </svg>
+            <p>Led-2</p>
+            <div class="on-off-indicator"></div>
+        </article>
+
+        <article class="device-button" data-led-id="3">
+            <svg fill="currentColor" id="Layer_1" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1">
+                <path d="m17.994 2.286a9 9 0 0 0 -14.919 5.536 8.938 8.938 0 0 0 2.793 7.761 6.263 6.263 0 0 1 2.132 4.566v.161a3.694 3.694 0 0 0 3.69 3.69h.62a3.694 3.694 0 0 0 3.69-3.69v-.549a5.323 5.323 0 0 1 1.932-4 8.994 8.994 0 0 0 .062-13.477zm-5.684 19.714h-.62a1.692 1.692 0 0 1 -1.69-1.69s-.007-.26-.008-.31h4.008v.31a1.692 1.692 0 0 1 -1.69 1.69zm4.3-7.741a7.667 7.667 0 0 0 -2.364 3.741h-1.246v-7.184a3 3 0 0 0 2-2.816 1 1 0 0 0 -2 0 1 1 0 0 1 -2 0 1 1 0 0 0 -2 0 3 3 0 0 0 2 2.816v7.184h-1.322a8.634 8.634 0 0 0 -2.448-3.881 7 7 0 0 1 3.951-12.073 7.452 7.452 0 0 1 .828-.046 6.921 6.921 0 0 1 4.652 1.778 6.993 6.993 0 0 1 -.048 10.481z"/>
+            </svg>
+            <p>Led-3</p>
+            <div class="on-off-indicator"></div>
+        </article>
+    </section>
+
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/weathercast.js"></script>
+</body>
+</html>

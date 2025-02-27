@@ -3,7 +3,7 @@ const topic = "ai/command"; // Топик для сообщений
 
 // Подключение к брокеру MQTT
 const client = mqtt.connect(brokerUrl, {
-    protocol: 'ws' // Указываем, что используем WebSocket
+    protocol: 'mqtt' // Указываем, что используем WebSocket
 });
 
 client.on("connect", () => {

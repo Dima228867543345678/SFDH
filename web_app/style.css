@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark-grey: #1e1e1e;
+    --device-button-bg: #252525;
+    --device-button-bg-focus: #1d1d1d;
+    --device-button-border-focus: #292929;
+    --article-border-color: #333333;
+    --on-green: #00db5b;
+    --off-green:#001408;
+}
+
+body {
+    background-color: var(--dark-grey);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#section-climat {
+    height: calc(100vh - 40px);
+    width: calc(30% - 40px);
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 20px;
+    gap: 10px;
+}
+
+#section-controls {
+    height: calc(100vh - 40px);
+    width: calc(70% - 20px);
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    padding-left: 0px;
+    gap: 10px;
+}
+
+article {
+    border-radius: 15px;
+    border-color: var(--article-border-color);
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.device-button {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: var(--device-button-bg);
+    transition: all 0.15s ease-out;
+    align-items: center;
+    justify-content: center;
+    will-change: transform;
+}
+
+.device-button>svg {
+    width: 55%;
+    height: 55%;
+}
+
+.device-button>p {
+    color: white;
+    font-size: 0.8rem;
+    margin-top: 3px;
+}
+
+.device-button:hover {
+    transform: scale(0.98);
+    transform-origin: center;
+}
+
+.device-button:active {
+    transform: scale(0.96);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--device-button-bg-focus);
+    border-color: var(--device-button-border-focus);
+}
+
+.on-off-indicator {
+    width: 88%;
+    height: 88%;
+    position: absolute;
+    border-color: var(--off-green);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 12px;
+}
+
+.device-button.active .on-off-indicator {
+    border-color: var(--on-green);
+}
+
+.device-button>svg {
+    user-select: none;
+    fill: black;
+}
+
+.device-button.active>svg {
+    fill: white;
+}
+
+#weather-card {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 20px);
+    height: calc(25% - 20px);
+    background: #1E1E1E;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#weather-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+}
+
+#weather-icon {
+    width: 30%;
+}
+
+#weather-additional-data {
+    width: 50%;
+    height: calc(100% - 20px);
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#weather-humidity,
+#weather-pressure {
+    width: 100%;
+    height: 43%;
+}
+
+#weather-calendar {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1E1E1E;
+    color: white;
+    text-align: center;
+}
+
+#weather-calendar th, #weather-calendar td {
+    border: 1px solid #333;
+    padding: 5px;
+    width: 33.3%;
+}
+
+#weather-calendar th {
+    text-transform: capitalize;
+}
+
+#day-icons td {
+    padding: 0;
+    height: 50px;
+}
+
+#weather-calendar img {
+    width: 50px;
+}
+
+thead th:first-child {
+    border-top-left-radius: 12px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 12px;
+}
+
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
